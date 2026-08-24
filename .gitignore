@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Ignore generated outputs so git status stays clean
+*.csv
+backend/*.csv
+
+# But strictly track our sample data / ground truth in the data folder
+!data/gateway_ledger.csv
+!data/bank_statement.csv
+!data/ground_truth.csv
+!data/matches.csv
+!data/exceptions.csv
+!data/false_positives.csv
+!data/audit_log.csv

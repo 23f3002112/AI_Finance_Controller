@@ -44,9 +44,9 @@ def evaluate(matches_path, ground_truth_path):
         for w in wrong_matches:
             print(w)
 
-    pd.DataFrame(wrong_matches).to_csv("false_positives.csv", index=False)
+    pd.DataFrame(wrong_matches).to_csv("../data/false_positives.csv", index=False)
     return precision, wrong_matches
 
 
 if __name__ == "__main__":
-    evaluate("matches.csv", "../data/ground_truth.csv")
+    evaluate("../data/matches.csv", "../data/ground_truth.csv")

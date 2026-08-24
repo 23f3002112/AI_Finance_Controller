@@ -114,5 +114,5 @@ if __name__ == "__main__":
     run_matching(
         gateway_path="../data/gateway_ledger.csv",
         bank_path="../data/bank_statement.csv",
-        outdir=".",
+        outdir="../data",
     )

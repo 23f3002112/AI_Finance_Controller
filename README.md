@@ -1,6 +1,30 @@
 # AI Finance Controller — Multi-Source Reconciliation Agent
 Razorpay AI Buildathon 2026 — Track 04
 
+## Developer Setup
+To get started with development, set up your virtual environment and install the dependencies. Then, generate the initial synthetic data and run the deterministic matching pipeline:
+
+```bash
+# 1. Create and activate virtual environment
+python -m venv venv
+.\venv\Scripts\activate  # On Windows
+# source venv/bin/activate  # On Mac/Linux
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Generate the synthetic datasets
+cd data
+python generate_synthetic_data.py --n 250 --seed 42
+cd ..
+
+# 4. Run the deterministic matching engine and evaluation
+cd backend
+python matcher.py
+python evaluate.py
+cd ..
+```
+
 ## Problem
 Reconciling a payment gateway ledger against a bank statement is still done
 by hand at most companies. Bank narration text is messy, settlement lags by
