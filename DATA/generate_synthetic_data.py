@@ -84,7 +84,7 @@ def build_narration(utr, name, rng):
     return template.format(utr=utr, utr_lower=utr.lower(), name=name)
 
 
-def generate(n, seed, outdir):
+def generate(n, seed, outdir, report=False):
     rng = random.Random(seed)
     start_date = datetime(2026, 6, 1)
 
@@ -152,6 +152,22 @@ def generate(n, seed, outdir):
             # Missing on bank side entirely (e.g. gateway shows captured, settlement pending/lost)
             ground_truth.append({"transaction_id": txn_id, "bank_ref": None, "match_type": "missing_on_bank"})
 
+        elif fate < 0.97:
+            # Partial refund: gateway transaction matches a bank entry for a smaller amount
+            lag_days = rng.choice([0, 1, 2])
+            value_date = gw_timestamp + timedelta(days=lag_days)
+            refund_amount = round(rng.uniform(10, amount * 0.5), 2)
+            bank_amount = round(amount - refund_amount, 2)
+            bank_ref_counter += 1
+            bref = f"BNK{bank_ref_counter}"
+            bank_rows.append({
+                "bank_ref": bref,
+                "amount": bank_amount,
+                "value_date": value_date.strftime("%Y-%m-%d"),
+                "narration": build_narration(utr, name, rng),
+            })
+            ground_truth.append({"transaction_id": txn_id, "bank_ref": bref, "match_type": "partial_refund"})
+
         else:
             # Near-duplicate decoy: same amount, same day, DIFFERENT unrelated transaction
             # This creates a genuinely ambiguous case for the matcher to test against.
@@ -206,11 +222,24 @@ def generate(n, seed, outdir):
     print(f"Ground truth entries: {len(ground_truth)}")
     print(f"Files written to: {outdir}/")
 
+    if report:
+        from collections import Counter
+        counts = Counter(row["match_type"] for row in ground_truth)
+        total = len(ground_truth)
+        print("\n--- Match Type Distribution ---")
+        for mtype, count in counts.most_common():
+            print(f"{mtype:<30} {count:>5} ({count/total*100:.1f}%)")
+        print("-------------------------------")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--n", type=int, default=250, help="number of base transactions")
+    parser.add_argument("--scale", type=int, default=1, help="multiplier for n to scale up dataset")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--outdir", type=str, default=".")
+    parser.add_argument("--report", action="store_true", help="print distribution report")
     args = parser.parse_args()
-    generate(args.n, args.seed, args.outdir)
+    
+    total_n = args.n * args.scale
+    generate(total_n, args.seed, args.outdir, args.report)
