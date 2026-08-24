@@ -1,0 +1,14 @@
+transaction_id,bank_ref,match_type,confidence,amount_diff,date_diff_days
+pay_7867414708,BNK90007,tolerant_amount_date,0.85,0.0,0
+pay_3799264931,BNK90027,tolerant_amount_date,0.85,0.0,0
+pay_1111088881,BNK90034,tolerant_amount_date,0.85,0.0,1
+pay_1730074215,BNK90040,tolerant_amount_date,0.85,0.0,1
+pay_9776913529,BNK90060,tolerant_amount_date,0.85,0.0,1
+pay_2087974350,BNK90061,tolerant_amount_date,0.85,0.0,1
+pay_5973319056,BNK90077,tolerant_amount_date,0.85,0.0,0
+pay_9470922075,BNK90086,tolerant_amount_date,0.85,0.0,0
+pay_4947728706,BNK90094,tolerant_amount_date,0.85,0.0,1
+pay_8923555411,BNK90118,tolerant_amount_date,0.85,0.0,0
+pay_4794276323,BNK90122,tolerant_amount_date,0.85,0.0,1
+pay_5461537013,BNK90130,tolerant_amount_date,0.85,0.0,1
+pay_2537965898,BNK90156,tolerant_amount_date,0.85,0.0,0
