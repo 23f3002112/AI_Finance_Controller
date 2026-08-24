@@ -86,6 +86,69 @@ def run_matching(gateway_path, bank_path, outdir="."):
             audit.append({"transaction_id": g["transaction_id"], "rule": "tolerant_amount_date",
                            "result": "no_candidate_found", "bank_ref": None})
 
+    # ---- PASS 3: rapidfuzz token_set_ratio ----
+    unresolved_gw = gw[~gw["transaction_id"].isin([m["transaction_id"] for m in matches])]
+    for _, g in unresolved_gw.iterrows():
+        candidates = bank[~bank["bank_ref"].isin(matched_bank_refs)].copy()
+        if candidates.empty:
+            continue
+        
+        # Score against UTR context
+        query = str(g["utr"])
+        candidates["fuzzy_score"] = candidates["narration"].apply(lambda x: fuzz.token_set_ratio(query, str(x)))
+        candidates = candidates.sort_values(by="fuzzy_score", ascending=False)
+        
+        if candidates.iloc[0]["fuzzy_score"] > 85:
+            # Check for ambiguity (gap requirement)
+            is_ambiguous = False
+            if len(candidates) > 1:
+                if (candidates.iloc[0]["fuzzy_score"] - candidates.iloc[1]["fuzzy_score"]) < 15:
+                    is_ambiguous = True
+                    
+            if not is_ambiguous:
+                b = candidates.iloc[0]
+                matches.append({
+                    "transaction_id": g["transaction_id"], "bank_ref": b["bank_ref"],
+                    "match_type": "fuzzy_narration", "confidence": 0.8,
+                    "amount_diff": round(abs(g["amount"] - b["amount"]), 2),
+                    "date_diff_days": abs((g["date"] - b["date"]).days),
+                })
+                matched_bank_refs.add(b["bank_ref"])
+                audit.append({"transaction_id": g["transaction_id"], "rule": "fuzzy_narration",
+                               "result": "matched", "bank_ref": b["bank_ref"]})
+            else:
+                audit.append({"transaction_id": g["transaction_id"], "rule": "fuzzy_narration",
+                               "result": "ambiguous_fuzzy_scores", "bank_ref": None})
+        else:
+            audit.append({"transaction_id": g["transaction_id"], "rule": "fuzzy_narration",
+                           "result": "no_high_score", "bank_ref": None})
+
+    # ---- PASS 4: partial refund detection ----
+    unresolved_gw = gw[~gw["transaction_id"].isin([m["transaction_id"] for m in matches])]
+    for _, g in unresolved_gw.iterrows():
+        candidates = bank[~bank["bank_ref"].isin(matched_bank_refs)].copy()
+        if candidates.empty:
+            continue
+            
+        candidates["date_diff"] = candidates["date"].apply(lambda d: abs((d - g["date"]).days))
+        candidates = candidates[candidates["date_diff"] <= 2]
+        candidates = candidates[(candidates["amount"] >= g["amount"] * 0.5) & (candidates["amount"] <= g["amount"] * 0.99)]
+        
+        if len(candidates) == 1:
+            b = candidates.iloc[0]
+            matches.append({
+                "transaction_id": g["transaction_id"], "bank_ref": b["bank_ref"],
+                "match_type": "partial_refund_candidate", "confidence": 0.6,
+                "amount_diff": round(abs(g["amount"] - b["amount"]), 2),
+                "date_diff_days": int(b["date_diff"]),
+            })
+            matched_bank_refs.add(b["bank_ref"])
+            audit.append({"transaction_id": g["transaction_id"], "rule": "partial_refund_detection",
+                           "result": "review_candidate", "bank_ref": b["bank_ref"]})
+        elif len(candidates) > 1:
+            audit.append({"transaction_id": g["transaction_id"], "rule": "partial_refund_detection",
+                           "result": "ambiguous_multiple_candidates", "bank_ref": None})
+
     # ---- Build exceptions list ----
     matched_txn_ids = {m["transaction_id"] for m in matches}
     exceptions = []

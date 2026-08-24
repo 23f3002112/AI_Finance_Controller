@@ -31,10 +31,7 @@ gateway_txn,pay_6981604165,22038.79,no_confident_bank_match_found
 gateway_txn,pay_1217487269,27821.43,no_confident_bank_match_found
 gateway_txn,pay_9711080868,9963.58,no_confident_bank_match_found
 gateway_txn,pay_8132213650,9431.84,no_confident_bank_match_found
-gateway_txn,pay_8974140139,4887.72,no_confident_bank_match_found
 gateway_txn,pay_9075121701,31119.54,no_confident_bank_match_found
-gateway_txn,pay_3925621610,2376.85,no_confident_bank_match_found
-gateway_txn,pay_2082326234,4998.49,no_confident_bank_match_found
 gateway_txn,pay_1383539822,3344.03,no_confident_bank_match_found
 gateway_txn,pay_7054856909,35111.75,no_confident_bank_match_found
 gateway_txn,pay_5694190173,2780.29,no_confident_bank_match_found
@@ -55,11 +52,8 @@ gateway_txn,pay_9447304615,44039.66,no_confident_bank_match_found
 gateway_txn,pay_4704785815,5459.67,no_confident_bank_match_found
 gateway_txn,pay_7690274631,6529.45,no_confident_bank_match_found
 gateway_txn,pay_3119423746,2619.62,no_confident_bank_match_found
-gateway_txn,pay_4953022176,4326.71,no_confident_bank_match_found
 gateway_txn,pay_3301610601,17622.05,no_confident_bank_match_found
 gateway_txn,pay_8625857078,30964.3,no_confident_bank_match_found
-bank_entry,BNK90213,3577.08,no_gateway_counterpart_or_ambiguous
-bank_entry,BNK90214,2789.63,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90049,21931.93,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90021,29923.84,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90105,35388.24,no_gateway_counterpart_or_ambiguous
@@ -76,7 +70,6 @@ bank_entry,BNK90177,34720.25,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90057,21704.49,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90006,11425.92,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90034,21889.32,no_gateway_counterpart_or_ambiguous
-bank_entry,BNK90215,1524.55,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90048,21931.93,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90005,11425.92,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90035,21889.32,no_gateway_counterpart_or_ambiguous
@@ -99,7 +92,6 @@ bank_entry,BNK90017,43753.0,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90199,2619.62,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90072,11206.38,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90196,6529.45,no_gateway_counterpart_or_ambiguous
-bank_entry,BNK90212,2549.59,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90210,4231.92,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90218,1931.41,no_gateway_counterpart_or_ambiguous
 bank_entry,BNK90162,21840.8,no_gateway_counterpart_or_ambiguous
