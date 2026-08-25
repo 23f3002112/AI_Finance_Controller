@@ -200,8 +200,14 @@ def run_orchestrator(gateway_path, bank_path, output_path, workers=4):
         "gateway_exceptions": []
     }
     
-    ground_truth_path = gateway_path.replace("gateway_ledger.csv", "ground_truth.csv")
+    ground_truth_path = os.path.join(os.path.dirname(gateway_path), "ground_truth.csv")
+    if not os.path.exists(ground_truth_path):
+        # Also try the main data dir for local runs
+        ground_truth_path = gateway_path.replace("gateway_ledger.csv", "ground_truth.csv")
+
     try:
+        if not os.path.exists(ground_truth_path) or ground_truth_path == gateway_path:
+            raise FileNotFoundError()
         truth = pd.read_csv(ground_truth_path)
         truth_valid = truth.dropna(subset=["transaction_id", "bank_ref"])
         correct_pairs = set(zip(truth_valid["transaction_id"], truth_valid["bank_ref"]))

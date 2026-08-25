@@ -1,3 +1,9 @@
 pandas
 rapidfuzz
 faker
+anthropic
+fastapi
+uvicorn
+python-multipart
+streamlit
+requests

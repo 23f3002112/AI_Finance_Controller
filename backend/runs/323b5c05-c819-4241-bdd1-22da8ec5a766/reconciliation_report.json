@@ -1,0 +1,6741 @@
+{
+  "run_metadata": {
+    "timestamp": "2026-08-25T20:57:07.360348Z",
+    "input_files": {
+      "gateway": "C:\\Users\\HP\\OneDrive\\Desktop\\AI Finance Controller\\backend\\runs\\323b5c05-c819-4241-bdd1-22da8ec5a766\\gateway.csv",
+      "bank": "C:\\Users\\HP\\OneDrive\\Desktop\\AI Finance Controller\\backend\\runs\\323b5c05-c819-4241-bdd1-22da8ec5a766\\bank.csv"
+    },
+    "total_records": 206,
+    "bank_records": 219,
+    "threads": 4
+  },
+  "summary": {
+    "match_rate": 85.9,
+    "precision": "ground_truth.csv not found"
+  },
+  "transactions": [
+    {
+      "transaction_id": "pay_3746317213",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.386963Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.412363Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90001"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7110082321",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.387621Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.417597Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90002"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1240251661",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.389092Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.413716Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.413724Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.419707Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.419715Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.425105Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.425112Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.439360Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90004"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2554762903",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.390327Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.414486Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.414492Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.418528Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.418534Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.423770Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.423778Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.433799Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90006"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7867414708",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.417075Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.426315Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90007"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5141907136",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.425574Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.430497Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.430502Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.434881Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.434886Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.441086Z",
+          "state": "FUZZY_CHECK",
+          "result": "ambiguous_fuzzy_scores",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.441093Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.455079Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90009"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2419179580",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.430326Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.437846Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.437853Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.443303Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.443309Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.447848Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.447854Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.457493Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90011"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4700855390",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.439025Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.445891Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90012"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6002078344",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.445365Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.451932Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90013"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3181106786",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.451428Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.457939Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90014"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7258731893",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.454718Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.459662Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90015"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5871743247",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.457372Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.462717Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90016"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8325785916",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.461056Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.464303Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.464316Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.468432Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.468438Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.472993Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.472999Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.482966Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90017"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1118543408",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.467526Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.475346Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90019"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6859286614",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.473672Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.483972Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90020"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6600100279",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.479985Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.482349Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.482356Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.485331Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.485338Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.488690Z",
+          "state": "FUZZY_CHECK",
+          "result": "ambiguous_fuzzy_scores",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.488697Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.497284Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90021"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1632880459",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.482150Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.493942Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90023"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5816198518",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.493807Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.495850Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.495858Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.499242Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.499247Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.504443Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.504452Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.518973Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90024"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3691864041",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.489126Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.497066Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90026"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6928691380",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.496434Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.500650Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.500656Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.503673Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.503682Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.509237Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.509243Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.519724Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90027"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3294043548",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.508677Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.515332Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90029"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3799264931",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.502077Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.508827Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90030"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8313706299",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.518249Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.530922Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90031"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5838636972",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.530529Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.541215Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90032"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9229469952",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.535378Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.543672Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90033"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9594878379",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.541067Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.543201Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.543207Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.547315Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.547321Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.549479Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.549485Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.561543Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90034"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7666869046",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.543003Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.552528Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90036"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9301537234",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.548510Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.557651Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90037"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2891100776",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.552237Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.557739Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90038"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3651968205",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.557497Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.561856Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90039"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1730074215",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.561221Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.563688Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.563693Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.567951Z",
+          "state": "RESOLVED",
+          "result": "tolerant_amount_date",
+          "details": "BNK90040"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2178884276",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.559707Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.567658Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90041"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1323408297",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.564687Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.577123Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90042"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9861449701",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.576674Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.584860Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90043"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8875651818",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.570059Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.577703Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90044"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2432410914",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.582659Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.594136Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90045"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2390587865",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.580939Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.584949Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90046"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3389594115",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.588885Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.594417Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90047"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7098134112",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.606405Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.609887Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.609893Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.612266Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.612272Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.615671Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.615676Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.626473Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90049"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2846465000",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.600171Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.611104Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90050"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8757570742",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.610458Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.621613Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90051"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3250402001",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.616783Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.622197Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90052"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7417183769",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.621434Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.626746Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90053"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5658832688",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.626308Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.631359Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90054"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9752058817",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.624574Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.631222Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90055"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6128260438",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.630864Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.634355Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.634361Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.638369Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.638375Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.644974Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.644981Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.655436Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90057"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8086527181",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.648254Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.655173Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90058"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1205082311",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.637005Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.648374Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90059"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9776913529",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.654801Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.657374Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.657382Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.661935Z",
+          "state": "RESOLVED",
+          "result": "tolerant_amount_date",
+          "details": "BNK90060"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2087974350",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.652467Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.661847Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90061"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8417757797",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.661721Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.665799Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90062"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5092199300",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.658348Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.665520Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90063"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1487258103",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.665382Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.667680Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.667687Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.674508Z",
+          "state": "RESOLVED",
+          "result": "tolerant_amount_date",
+          "details": "BNK90064"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3121808073",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.663889Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.674192Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90065"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5849159641",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.673905Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.683881Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90066"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7638204740",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.683781Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.685604Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.685609Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.693212Z",
+          "state": "RESOLVED",
+          "result": "tolerant_amount_date",
+          "details": "BNK90067"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8788828039",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.680650Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.687148Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90068"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4638577630",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.686168Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.693485Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90069"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1619623590",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.690620Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.697617Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90070"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6582557981",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.692901Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.698162Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90071"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8139209752",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.697086Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.701356Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.701362Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.705172Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.705179Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.709646Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.709651Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.721587Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90072"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6656646925",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.695359Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.697786Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.697792Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.703812Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.703823Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.708789Z",
+          "state": "FUZZY_CHECK",
+          "result": "ambiguous_fuzzy_scores",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.708795Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.721417Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90074"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5973319056",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.717624Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.721928Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90076"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8679232444",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.705867Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.717774Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90077"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8079331637",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.721273Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.728550Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90078"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9392515666",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.728269Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.739053Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90079"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1481933114",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.723862Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.728841Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90080"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4106464319",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.738735Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.745573Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90081"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2613385303",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.735678Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.745317Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90082"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5961208540",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.743169Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.750042Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90083"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9561946187",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.744960Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.750265Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90084"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9470922075",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.749712Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.754266Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90085"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6338036681",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.747752Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.753948Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90086"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8397709966",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.752053Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.756845Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90087"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1993998848",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.756709Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.772284Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90088"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1639509845",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.771869Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.780290Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90089"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9830946410",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.778326Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.780921Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.780927Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.784328Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.784336Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.786983Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.786990Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.801816Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90091"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8947526020",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.779815Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.794462Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90092"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8617360361",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.785528Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.791104Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.791111Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.795639Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.795644Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.798907Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.798914Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.808819Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90094"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6655089949",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.794289Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.802061Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90095"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3238126936",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.801513Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.809163Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90096"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8998080862",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.808526Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.813924Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90097"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2567729816",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.806725Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.811543Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90098"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8366884200",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.813543Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.815730Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.815735Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.818650Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.818658Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.822487Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.822494Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.833821Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90099"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5942411853",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.811438Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.817987Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90101"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5785590330",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.817624Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.828019Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90102"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3383331379",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.823158Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.833562Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90103"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9844874547",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.827908Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.830924Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.830930Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.834296Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.834302Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.838446Z",
+          "state": "FUZZY_CHECK",
+          "result": "ambiguous_fuzzy_scores",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.838451Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.851897Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90105"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6981604165",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.833279Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.837225Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.837234Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.841714Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.841722Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.845582Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.845587Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.856982Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90106"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4651178503",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.851795Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.857296Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90108"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2837384013",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.845241Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.852159Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90109"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6211604267",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.856655Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.862071Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90110"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9883760207",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.854558Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.861772Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90111"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9056616444",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.861658Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.867223Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90112"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2191714875",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.859961Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.866953Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90113"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1754393408",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.866635Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.872612Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90114"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7425904890",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.864618Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.872354Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90115"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2801177461",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.872241Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.878315Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90116"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6156843353",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.869514Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.878231Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90117"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8418332121",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.878104Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.883146Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90118"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6311894154",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.875704Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.882916Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90119"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1515024824",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.882812Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.888039Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90120"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4409386903",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.880645Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.887740Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90121"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3057422183",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.885385Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.905952Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90122"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9553561889",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.905816Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.914066Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90123"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5855415646",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.908601Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.914390Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90124"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7882206934",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.911483Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.916765Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90125"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6800272428",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.913624Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.918480Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90126"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1449790661",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.918363Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.930387Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90127"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7002076563",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.924807Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.933613Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90128"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3664052763",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.929991Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.936366Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90129"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5381866906",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.944276Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.952557Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90130"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4526242854",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.951959Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.964600Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90131"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3780475472",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.959053Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.964811Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90132"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6576395496",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.975040Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.989845Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90133"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5975440949",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.982650Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.990205Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90134"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2340426053",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.989523Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.999187Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90135"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9684051360",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.998239Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.010964Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90136"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3767405445",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.004758Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.014799Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90137"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3426709025",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.014246Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.025893Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90138"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7406579219",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.021529Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.028252Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90139"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3415200001",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.025787Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.030389Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90140"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9125023089",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.028129Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.038018Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90141"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1862812038",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.030102Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.032734Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.032740Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.037068Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.037073Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.039904Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.039909Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.055857Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90142"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4471642620",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.033049Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.048186Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90144"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3853978147",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.036834Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.042789Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.042795Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.047790Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.047798Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.050719Z",
+          "state": "FUZZY_CHECK",
+          "result": "ambiguous_fuzzy_scores",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.050724Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.063583Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90145"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6558450990",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.047485Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.056157Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90147"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2537965898",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.055520Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.058896Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.058902Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.063829Z",
+          "state": "RESOLVED",
+          "result": "tolerant_amount_date",
+          "details": "BNK90148"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9899689747",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.059709Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.075462Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90149"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3159668272",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.075346Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.077960Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.077965Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.080853Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.080858Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.083908Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.083913Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.095252Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90151"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3384006407",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.066919Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.075778Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90152"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4329446784",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.093478Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.104823Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90153"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6041646576",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.077791Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.094434Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90154"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1645277642",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.104502Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.115445Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90155"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3474420092",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.111823Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.119532Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90156"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7597520265",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.115339Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.117691Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.117698Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.120738Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.120747Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.124984Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.124990Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.137688Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90157"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1430693397",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.118350Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.131839Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90159"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7532669066",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.125313Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.132097Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90160"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9576264323",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.131708Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.137995Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90161"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6046735986",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.137524Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.140297Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.140302Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.144248Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.144254Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.146862Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.146867Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.157292Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90162"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7341757401",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.134425Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.148196Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90164"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3636366799",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.147892Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.156985Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90165"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7453081889",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.140952Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.148925Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90166"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7437168216",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.156870Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.162433Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90167"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7384985150",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.153398Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.162159Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90168"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4895849088",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.161870Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.167966Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90169"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1904397668",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.159777Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.165301Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90170"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7587552692",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.167842Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.174367Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90171"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4422089886",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.165174Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.171376Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90172"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1294050451",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.171217Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.176894Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90173"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7099897373",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.174255Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.179466Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90174"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5271497065",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.176588Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.183601Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90175"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5180180262",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.179359Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.181653Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.181659Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.184732Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.184738Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.189099Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.189105Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.199813Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90177"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5551699520",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.182908Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.199690Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90178"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6788175717",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.190646Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.194410Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.194416Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.198310Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.198318Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.201427Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.201434Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.211357Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90180"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4096686730",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.198860Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.211100Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90181"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7944675764",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.206012Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.209030Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.209036Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.212411Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.212417Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.216906Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.216912Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.229131Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90182"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3343446878",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.228743Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.242039Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90184"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9999520085",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.218185Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.228851Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90185"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3996893560",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.241596Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.252922Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90186"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4272906474",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.234826Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.242527Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90187"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8817415821",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.249415Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.270568Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90188"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7949105797",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.247245Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.253177Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90189"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2203423402",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.269935Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.278353Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90190"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4704785815",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.257462Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.262232Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.262238Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.265958Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.265964Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.268683Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.268688Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.278589Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90191"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6597837495",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.275509Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.284775Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90193"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6354895816",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.278246Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.285053Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90194"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7690274631",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.284647Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.287739Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.287748Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.291712Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.291720Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.295095Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.295101Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.308964Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90195"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5876105046",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.281219Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.299564Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90197"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2634694666",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.299120Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.309244Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90198"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3119423746",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.288604Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.293339Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.293347Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.297319Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.297326Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.301395Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.301400Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.309383Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90199"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6528427385",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.325852Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.341856Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90201"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3301610601",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.319328Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.324096Z",
+          "state": "EXACT_CHECK",
+          "result": "ambiguous_multiple_hits",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.324102Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.327344Z",
+          "state": "TOLERANT_CHECK",
+          "result": "ambiguous_2_candidates -> escalate_to_llm",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.327350Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.330867Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.330872Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.342011Z",
+          "state": "RESOLVED",
+          "result": "llm_resolved",
+          "details": "BNK90203"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6461039810",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.313305Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.326001Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90204"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8497100471",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.341693Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.351196Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90205"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8748133196",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.351068Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.352134Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90206"
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3291300350",
+      "final_status": "RESOLVED",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.347216Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.351480Z",
+          "state": "RESOLVED",
+          "result": "exact_utr",
+          "details": "BNK90207"
+        }
+      ]
+    }
+  ],
+  "bank_exceptions": [
+    {
+      "bank_ref": "BNK90213",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.355544Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.355556Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90214",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.355887Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.355901Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90208",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.355918Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.355927Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90107",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.356374Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.356385Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90022",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.356441Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.356452Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90215",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.356396Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.356403Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90048",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.356992Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.356997Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90005",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.357044Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.357056Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90035",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.357095Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.357101Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90090",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.357009Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.357013Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90179",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359662Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359669Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90093",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359949Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359954Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90010",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359974Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359978Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90196",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.360008Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.360014Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90212",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359689Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359695Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90210",
+      "classification": "interest_credit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359705Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359710Z",
+          "state": "RESOLVED",
+          "result": "interest_credit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90218",
+      "classification": "interest_credit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359715Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359718Z",
+          "state": "RESOLVED",
+          "result": "interest_credit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90219",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359723Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359726Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90211",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359732Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359735Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90008",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359740Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359743Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90073",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359748Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359751Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90192",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359757Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359760Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90003",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359765Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359768Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90150",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359773Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359776Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90217",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359780Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359783Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90216",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359788Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359791Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90158",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359796Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359799Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90100",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359804Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359806Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90075",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359811Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359814Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90163",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359822Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359825Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90056",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359835Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359839Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90209",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359844Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359847Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90200",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359852Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359855Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90176",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359859Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359862Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90028",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359867Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359870Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90018",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359875Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359878Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90104",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359883Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359887Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90025",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359891Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359894Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90143",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359899Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359902Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90183",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359907Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359910Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90202",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359915Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359918Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    },
+    {
+      "bank_ref": "BNK90146",
+      "classification": "unmatched_deposit",
+      "reasoning": "Mock classification based on narration keywords.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.359922Z",
+          "state": "LLM_CLASSIFY",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.359925Z",
+          "state": "RESOLVED",
+          "result": "unmatched_deposit",
+          "details": "Mock classification based on narration keywords."
+        }
+      ]
+    }
+  ],
+  "gateway_exceptions": [
+    {
+      "transaction_id": "pay_4218981849",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.459346Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.461219Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.461226Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.465454Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.465460Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.470326Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.470333Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.477824Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3105400301",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.514348Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.518427Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.518433Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.522350Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.522358Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.525534Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.525541Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.531678Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4275930923",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.524654Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.528598Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.528604Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.532422Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.532427Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.535703Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.535708Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.539931Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9733234156",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.567551Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.569512Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.569517Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.572515Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.572523Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.575784Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.575790Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.580559Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3946766309",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.584756Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.586543Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.586549Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.589756Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.589763Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.593764Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.593770Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.599808Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_6218484323",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.593432Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.597002Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.597008Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.600404Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.600409Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.604139Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.604147Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.608168Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5983503547",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.629354Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.632060Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.632066Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.637798Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.637808Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.642362Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.642369Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.647408Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3493857758",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.669073Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.672035Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.672043Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.675038Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.675046Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.678473Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.678479Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.682136Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3053775623",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.726554Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.729130Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.729135Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.733044Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.733050Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.735205Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.735212Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.740816Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4184611760",
+      "reason": "no_plausible_candidate",
+      "details": "",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.753793Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.756981Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.756986Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.759753Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.759759Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.762939Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.762946Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.769672Z",
+          "state": "EXCEPTION",
+          "result": "no_plausible_candidate",
+          "details": ""
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7402059279",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.764185Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.767224Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.767229Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.770729Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.770741Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.773609Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.773616Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.778183Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1217487269",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.887395Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.890269Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.890277Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.892805Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.892811Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.897979Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.897984Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.904192Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9711080868",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.891625Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.894717Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.894725Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.897459Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.897465Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.900890Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.900896Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.905676Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8132213650",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.916663Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.920206Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.920213Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.924233Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.924240Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.926619Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.926624Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.931390Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8974140139",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.933508Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.935799Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.935805Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.939267Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.939274Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.943527Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.943533Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.949156Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9075121701",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.935594Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.940764Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.940772Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.945869Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.945876Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.950675Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.950681Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.954751Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_3925621610",
+      "reason": "no_plausible_candidate",
+      "details": "",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.956949Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.960032Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.960038Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.963495Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.963501Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.966540Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.966546Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.972339Z",
+          "state": "EXCEPTION",
+          "result": "no_plausible_candidate",
+          "details": ""
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2082326234",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.964450Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.968536Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.968542Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.973207Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.973215Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.975556Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.975561Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.979248Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_1383539822",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.980809Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.984058Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.984066Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.987230Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.987236Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.990850Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.990855Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.995548Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_7054856909",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:06.996129Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.998424Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:06.998431Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.002803Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.002809Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.005856Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.005861Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.009263Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_5694190173",
+      "reason": "no_plausible_candidate",
+      "details": "",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.010852Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.013687Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.013693Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.016786Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.016792Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.020076Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.020083Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.023722Z",
+          "state": "EXCEPTION",
+          "result": "no_plausible_candidate",
+          "details": ""
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8604215219",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.063479Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.065868Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.065876Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.068593Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.068599Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.071542Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.071550Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.075168Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2541015125",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.085414Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.089797Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.089804Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.093730Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.093737Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.095864Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.095869Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.101053Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_2136107759",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.099629Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.102979Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.102985Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.105761Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.105769Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.108825Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.108831Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.113411Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8886846400",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.210958Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.214691Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.214697Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.218610Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.218616Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.223153Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.223161Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.228386Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8600723288",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.231734Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.234065Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.234071Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.237546Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.237556Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.240961Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.240968Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.245555Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_9447304615",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.252791Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.256125Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.256132Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.259038Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.259044Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.261572Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.261578Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.267010Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_4953022176",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.308837Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.311567Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.311574Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.314359Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.314366Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.318103Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.318109Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.322181Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    },
+    {
+      "transaction_id": "pay_8625857078",
+      "reason": "llm_no_confident_match",
+      "details": "No candidates share UTR or merchant context. Likely decoys.",
+      "trace": [
+        {
+          "timestamp": "2026-08-25T20:57:07.333392Z",
+          "state": "EXACT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.337692Z",
+          "state": "EXACT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.337703Z",
+          "state": "TOLERANT_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.340468Z",
+          "state": "TOLERANT_CHECK",
+          "result": "no_candidate_found",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.340479Z",
+          "state": "FUZZY_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.343509Z",
+          "state": "FUZZY_CHECK",
+          "result": "no_high_score",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.343514Z",
+          "state": "LLM_CHECK",
+          "result": "started",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-08-25T20:57:07.348139Z",
+          "state": "EXCEPTION",
+          "result": "llm_no_confident_match",
+          "details": "No candidates share UTR or merchant context. Likely decoys."
+        }
+      ]
+    }
+  ]
+}

@@ -60,13 +60,29 @@ docs/
 ```
 
 ## How to run what exists so far
+
+### 1. Data Generation & CLI
 ```bash
 cd data
-python3 generate_synthetic_data.py --n 250 --seed 42
+python generate_synthetic_data.py --n 250 --seed 42
 
 cd ../backend
-python3 matcher.py
-python3 evaluate.py
+# Or you can run the full orchestrator:
+cd agent
+python orchestrator.py --gateway ../../data/gateway_ledger.csv --bank ../../data/bank_statement.csv --output reconciliation_report.json
+```
+
+### 2. Backend API
+```bash
+cd backend
+uvicorn api:app --reload
+```
+
+### 3. Frontend Dashboard
+In a new terminal window:
+```bash
+cd frontend
+streamlit run app.py
 ```
 
 ## Results on this run (seed=42, n=250)
