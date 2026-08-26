@@ -1,7 +1,3 @@
-"""
-Milestone 3 + 4 baseline: Deterministic + NLP-assisted reconciliation matcher.
-"""
-
 import re
 import csv
 import pandas as pd
