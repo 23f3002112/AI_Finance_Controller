@@ -5,7 +5,7 @@ import time
 import json
 import os
 
-API_URL = os.getenv("API_URL", "http://localhost:8000")
+API_URL = os.getenv("API_URL", "https://ai-finance-controller-wfym.onrender.com")
 
 st.set_page_config(page_title="AI Finance Controller", page_icon="💸", layout="wide")
 

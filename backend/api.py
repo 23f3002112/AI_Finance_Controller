@@ -14,6 +14,10 @@ from agent.orchestrator import run_orchestrator
 
 app = FastAPI(title="AI Finance Controller API")
 
+@app.get("/")
+async def root():
+    return {"status": "AI Finance Controller API is running perfectly! 🚀"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], # Open for local dev
