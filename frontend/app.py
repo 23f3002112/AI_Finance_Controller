@@ -100,7 +100,9 @@ elif view == "📊 Summary Dashboard":
                 with c1:
                     st.markdown(f'<div class="metric-card"><div class="metric-value">{summary.get("match_rate", 0)}%</div><div class="metric-label">Match Rate</div></div>', unsafe_allow_html=True)
                 with c2:
-                    st.markdown(f'<div class="metric-card"><div class="metric-value">{summary.get("precision", 0)}%</div><div class="metric-label">Precision Score</div></div>', unsafe_allow_html=True)
+                    precision = summary.get("precision", 0)
+                    precision_str = f"{precision}%" if isinstance(precision, (int, float)) else "N/A"
+                    st.markdown(f'<div class="metric-card"><div class="metric-value">{precision_str}</div><div class="metric-label">Precision Score</div></div>', unsafe_allow_html=True)
                 with c3:
                     st.markdown(f'<div class="metric-card"><div class="metric-value">{data.get("run_metadata", {}).get("total_records", 0)}</div><div class="metric-label">Total Records Processed</div></div>', unsafe_allow_html=True)
                 
