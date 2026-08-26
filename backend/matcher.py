@@ -15,8 +15,8 @@ def extract_utr_candidates(narration: str):
 
 
 def load_data(gateway_path, bank_path):
-    gw = pd.read_csv(gateway_path)
-    bank = pd.read_csv(bank_path)
+    gw = pd.read_csv(gateway_path, encoding_errors="replace")
+    bank = pd.read_csv(bank_path, encoding_errors="replace")
     gw = gw[gw["status"] == "captured"].copy()
     bank["value_date"] = pd.to_datetime(bank["value_date"])
     gw["timestamp"] = pd.to_datetime(gw["timestamp"])

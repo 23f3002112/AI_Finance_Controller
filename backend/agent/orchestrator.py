@@ -1,7 +1,7 @@
 import os
 import json
 import argparse
-from datetime import datetime
+from datetime import datetime, timezone
 import pandas as pd
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -186,7 +186,7 @@ def run_orchestrator(gateway_path, bank_path, output_path, workers=4):
     # Build Report
     report = {
         "run_metadata": {
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now(timezone.utc).isoformat() + "Z",
             "input_files": {"gateway": gateway_path, "bank": bank_path},
             "total_records": len(gw),
             "bank_records": len(bank),

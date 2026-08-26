@@ -3,27 +3,47 @@ import requests
 import pandas as pd
 import time
 import json
+import os
 
-API_URL = "http://localhost:8000"
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
-st.set_page_config(page_title="AI Finance Controller", layout="wide")
+st.set_page_config(page_title="AI Finance Controller", page_icon="💸", layout="wide")
 
-st.sidebar.title("Navigation")
-view = st.sidebar.radio("Go to", ["Run", "Summary", "Exceptions & Audit"])
+st.markdown("""
+    <style>
+    .main { background-color: #f8f9fa; }
+    h1 { color: #1e3a8a; font-family: 'Inter', sans-serif; font-weight: 700; }
+    h2, h3 { color: #3b82f6; font-family: 'Inter', sans-serif; }
+    .stButton>button { background-color: #2563eb; color: white; border-radius: 6px; padding: 0.5rem 2rem; font-weight: 600; }
+    .stButton>button:hover { background-color: #1d4ed8; color: white; }
+    .metric-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+    .metric-value { font-size: 2.5rem; font-weight: bold; color: #1e40af; }
+    .metric-label { font-size: 1rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+    </style>
+""", unsafe_allow_html=True)
 
-# Use session state to persist run_id across views
+st.sidebar.title("💸 AI Controller")
+st.sidebar.markdown("Enterprise Reconciliation Engine")
+st.sidebar.divider()
+view = st.sidebar.radio("Navigation", ["▶ Run Engine", "📊 Summary Dashboard", "🔍 Exceptions & Audit"])
+
 if "run_id" not in st.session_state:
     st.session_state.run_id = None
 
-if view == "Run":
-    st.title("Run Reconciliation Pipeline")
+if view == "▶ Run Engine":
+    st.title("Reconciliation Engine")
+    st.markdown("Upload your payment gateway ledger and bank statement to begin the AI-driven reconciliation process.")
     
-    gw_file = st.file_uploader("Upload Gateway Ledger CSV", type=["csv"])
-    bank_file = st.file_uploader("Upload Bank Statement CSV", type=["csv"])
+    col1, col2 = st.columns(2)
+    with col1:
+        gw_file = st.file_uploader("Upload Gateway Ledger (CSV)", type=["csv"])
+    with col2:
+        bank_file = st.file_uploader("Upload Bank Statement (CSV)", type=["csv"])
     
-    if st.button("Run Reconciliation"):
+    st.markdown("<br>", unsafe_allow_html=True)
+    if st.button("🚀 Start Reconciliation"):
         if gw_file and bank_file:
-            with st.spinner("Uploading files..."):
+            with st.spinner("Processing files and analyzing narrations..."):
                 files = {
                     "gateway_csv": (gw_file.name, gw_file.getvalue(), "text/csv"),
                     "bank_csv": (bank_file.name, bank_file.getvalue(), "text/csv")
@@ -33,71 +53,74 @@ if view == "Run":
                     if res.status_code == 200:
                         run_id = res.json()["run_id"]
                         st.session_state.run_id = run_id
-                        st.success(f"Files uploaded! Run ID: {run_id}")
                         
-                        # Trigger run
                         run_res = requests.post(f"{API_URL}/run/{run_id}")
                         if run_res.status_code == 200:
-                            st.info("Reconciliation started. Polling status...")
-                            
                             status_placeholder = st.empty()
+                            progress_bar = st.progress(0)
+                            
                             while True:
                                 stat_res = requests.get(f"{API_URL}/status/{run_id}")
                                 if stat_res.status_code == 200:
                                     status = stat_res.json().get("status")
-                                    status_placeholder.write(f"Current Status: **{status.upper()}**")
-                                    if status in ["completed", "failed"]:
-                                        if status == "completed":
-                                            st.success("Reconciliation Completed! Go to Summary tab.")
-                                        else:
-                                            st.error(f"Pipeline failed: {stat_res.json().get('error')}")
+                                    status_placeholder.info(f"Engine Status: **{status.upper()}**")
+                                    
+                                    if status == "completed":
+                                        progress_bar.progress(100)
+                                        st.success("Reconciliation Completed Successfully!")
                                         break
-                                time.sleep(1)
+                                    elif status == "failed":
+                                        progress_bar.empty()
+                                        st.error(f"Pipeline failed: {stat_res.json().get('error')}")
+                                        break
+                                    else:
+                                        progress_bar.progress(50)
+                                time.sleep(1.5)
                         else:
                             st.error(f"Failed to start run: {run_res.text}")
                     else:
                         st.error(f"Upload failed: {res.text}")
                 except Exception as e:
-                    st.error(f"Connection error: {str(e)}. Is the API running?")
+                    st.error(f"Connection error: {str(e)}. Ensure the backend API is running.")
         else:
-            st.warning("Please upload both CSV files.")
+            st.warning("Please upload both Gateway and Bank CSV files to proceed.")
 
-elif view == "Summary":
-    st.title("Run Summary")
+elif view == "📊 Summary Dashboard":
+    st.title("Executive Summary")
     if not st.session_state.run_id:
-        st.warning("No run active. Please go to 'Run' and start a job first.")
+        st.info("No active run found. Please navigate to 'Run Engine' to start a new reconciliation job.")
     else:
         try:
             res = requests.get(f"{API_URL}/results/{st.session_state.run_id}")
             if res.status_code == 200:
                 data = res.json()
                 summary = data.get("summary", {})
-                meta = data.get("run_metadata", {})
                 
-                col1, col2, col3 = st.columns(3)
-                col1.metric("Match Rate", f"{summary.get('match_rate', 0)}%")
-                col2.metric("Precision", f"{summary.get('precision', 0)}%")
-                col3.metric("Total Records", meta.get('total_records', 0))
+                c1, c2, c3 = st.columns(3)
+                with c1:
+                    st.markdown(f'<div class="metric-card"><div class="metric-value">{summary.get("match_rate", 0)}%</div><div class="metric-label">Match Rate</div></div>', unsafe_allow_html=True)
+                with c2:
+                    st.markdown(f'<div class="metric-card"><div class="metric-value">{summary.get("precision", 0)}%</div><div class="metric-label">Precision Score</div></div>', unsafe_allow_html=True)
+                with c3:
+                    st.markdown(f'<div class="metric-card"><div class="metric-value">{data.get("run_metadata", {}).get("total_records", 0)}</div><div class="metric-label">Total Records Processed</div></div>', unsafe_allow_html=True)
+                
+                st.markdown("<br><br>", unsafe_allow_html=True)
+                st.subheader("Resolution Breakdown")
                 
                 bmt = summary.get("by_match_type", {})
                 if bmt:
-                    st.subheader("Matches by Type")
-                    df_chart = pd.DataFrame([
-                        {"Match Type": k, "Count": v["count"]} 
-                        for k, v in bmt.items()
-                    ]).set_index("Match Type")
-                    st.bar_chart(df_chart)
+                    df_chart = pd.DataFrame([{"Match Type": k.replace("_", " ").title(), "Volume": v["count"]} for k, v in bmt.items()]).set_index("Match Type")
+                    st.bar_chart(df_chart, use_container_width=True, height=400)
             else:
                 st.error("Results not ready or run failed.")
         except Exception as e:
             st.error(f"Failed to fetch summary: {str(e)}")
 
-elif view == "Exceptions & Audit":
-    st.title("Exceptions & Audit Trace")
+elif view == "🔍 Exceptions & Audit":
+    st.title("Exceptions Control Center")
     if not st.session_state.run_id:
-        st.warning("No run active. Please go to 'Run' and start a job first.")
+        st.info("No active run found. Please navigate to 'Run Engine' to start a new reconciliation job.")
     else:
-        # Fetch exceptions
         try:
             res = requests.get(f"{API_URL}/exceptions/{st.session_state.run_id}?limit=100")
             if res.status_code == 200:
@@ -105,31 +128,36 @@ elif view == "Exceptions & Audit":
                 
                 if exceptions:
                     df_ex = pd.DataFrame(exceptions)
-                    reasons = ["All"] + list(df_ex["reason"].unique())
-                    selected_reason = st.selectbox("Filter by Reason Code", reasons)
+                    df_ex.rename(columns={"type": "Source", "id": "Reference ID", "reason": "Classification", "details": "AI Reasoning"}, inplace=True)
                     
-                    if selected_reason != "All":
-                        df_ex = df_ex[df_ex["reason"] == selected_reason]
+                    reasons = ["All Classifications"] + list(df_ex["Classification"].unique())
+                    selected_reason = st.selectbox("Filter Exceptions", reasons)
+                    
+                    if selected_reason != "All Classifications":
+                        df_ex = df_ex[df_ex["Classification"] == selected_reason]
                         
-                    st.dataframe(df_ex, use_container_width=True)
+                    st.dataframe(df_ex, use_container_width=True, hide_index=True)
                     
                     st.divider()
-                    st.subheader("Audit Trace Lookup")
-                    lookup_id = st.text_input("Enter Transaction ID / Bank Ref to view audit trace:", placeholder="e.g., pay_1234 or BNK9001")
+                    st.subheader("Deep Dive: AI Audit Trail")
+                    st.markdown("Enter a Transaction ID or Bank Ref to view the step-by-step reasoning behind its resolution.")
+                    lookup_id = st.text_input("Reference ID Lookup", placeholder="e.g., pay_1234 or BNK9001")
                     
                     if lookup_id:
                         audit_res = requests.get(f"{API_URL}/audit/{st.session_state.run_id}/{lookup_id}")
                         if audit_res.status_code == 200:
                             trace = audit_res.json().get("trace", [])
-                            st.write(f"Trace for **{lookup_id}**:")
+                            st.markdown(f"### Audit Trace for `{lookup_id}`")
                             for step in trace:
-                                with st.expander(f"{step['state']} -> {step['result']}", expanded=True):
-                                    st.write(f"**Timestamp:** {step['timestamp']}")
-                                    st.write(f"**Details:** {step['details']}")
+                                status_color = "green" if step["result"] in ["exact_match", "llm_match", "bank_fee"] else "orange" if "escalate" in step["result"] else "gray"
+                                with st.expander(f"**{step['state']}** ➔ {step['result']}", expanded=True):
+                                    st.caption(f"Timestamp: {step['timestamp']}")
+                                    if step['details']:
+                                        st.write(f"**AI Notes:** {step['details']}")
                         else:
-                            st.error(f"Trace not found for {lookup_id}.")
+                            st.warning(f"No audit trace found for '{lookup_id}'. Please check the ID and try again.")
                 else:
-                    st.info("No exceptions found!")
+                    st.success("🎉 No exceptions found! 100% Reconciliation achieved.")
             else:
                 st.error("Failed to fetch exceptions.")
         except Exception as e:

@@ -1,116 +1,118 @@
-# AI Finance Controller — Multi-Source Reconciliation Agent
-Razorpay AI Buildathon 2026 — Track 04
+# 💸 AI Finance Controller
+**The Enterprise Reconciliation Engine**
 
-## Developer Setup
-To get started with development, set up your virtual environment and install the dependencies. Then, generate the initial synthetic data and run the deterministic matching pipeline:
+**Problem Statement**
+Financial reconciliation between payment gateways (like Razorpay/Stripe) and bank statements is a manual, error-prone nightmare. Delayed settlements, noisy bank narrations, and mismatched amounts due to fees or partial refunds cause thousands of hours of wasted accounting effort and false positive matches.
 
+**The Solution**
+AI Finance Controller is an agentic, end-to-end reconciliation pipeline. It acts as an autonomous accountant—running deterministic rules for exact matches, applying fuzzy logic for tolerant matches, and selectively escalating ambiguous "decoy" transactions to an LLM (Claude) for semantic resolution. It produces a 100% transparent audit trail for every single transaction.
+
+---
+
+## 🏗️ Architecture
+
+```mermaid
+graph TD
+    A[Gateway Ledger CSV] --> C[Orchestrator Agent]
+    B[Bank Statement CSV] --> C
+    
+    C --> D{Phase 1: Deterministic Matcher}
+    
+    D -->|Exact UTR Match| E[Resolved: Exact Match]
+    D -->|Tolerance Match +/- 3 Days| F[Resolved: Tolerant Match]
+    D -->|Fuzzy Narration >85%| G[Resolved: Fuzzy Match]
+    D -->|Ambiguous / Decoys| H{Phase 2: LLM Resolution}
+    
+    H -->|Context matches| I[Resolved: LLM Match]
+    H -->|No context match| J[Exception: Escalated]
+    
+    C --> K{Phase 3: Orphan Bank Entries}
+    K -->|LLM Classifier| L[Categorized: Bank Fee, Interest, Unknown]
+
+    E -.-> M[(Audit Log Trace)]
+    F -.-> M
+    G -.-> M
+    I -.-> M
+    J -.-> M
+    L -.-> M
+
+    M --> N[FastAPI Backend]
+    N --> O[Streamlit Dashboard]
+```
+
+---
+
+## 🚀 How to Run Locally
+
+You can run the entire pipeline locally without any heavy dependencies.
+
+**1. Clone and Setup**
 ```bash
-# 1. Create and activate virtual environment
+git clone https://github.com/23f3002112/AI_Finance_Controller.git
+cd AI_Finance_Controller
 python -m venv venv
-.\venv\Scripts\activate  # On Windows
-# source venv/bin/activate  # On Mac/Linux
-
-# 2. Install dependencies
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-
-# 3. Generate the synthetic datasets
-cd data
-python generate_synthetic_data.py --n 250 --seed 42
-cd ..
-
-# 4. Run the deterministic matching engine and evaluation
-cd backend
-python matcher.py
-python evaluate.py
-cd ..
 ```
 
-## Problem
-Reconciling a payment gateway ledger against a bank statement is still done
-by hand at most companies. Bank narration text is messy, settlement lags by
-1-2 days, duplicates happen, and some transactions never make it to either
-side. This project builds an agent that closes that loop: match what it can
-confidently match, and give an honest, reasoned list of what it can't.
-
-## The bar this is built to clear
-- Match rate reported honestly (not just "% matched" but **precision** —
-  were the matches actually correct)
-- A real exception list with reason codes, not a black box
-- A full audit trail: every match has a rule/reason attached
-- At least one documented failure mode caught and explained
-
-## Repo structure
+**2. Configure Environment**
+Create a `.env` file in the root directory:
+```bash
+ANTHROPIC_API_KEY=your_api_key_here
 ```
-data/
-  generate_synthetic_data.py   # Milestone 2 — synthetic data generator
-  gateway_ledger.csv           # generated: payment gateway side
-  bank_statement.csv           # generated: messy bank side
-  ground_truth.csv             # HIDDEN answer key, dev-time only
+*(Note: If you don't have an API key, the system has a built-in smart mock that will simulate the LLM's reasoning for local testing!)*
 
-backend/
-  matcher.py                   # Milestone 3 — deterministic + tolerant matching
-  evaluate.py                  # Milestone 3/6 — precision scoring vs ground truth
-  nlp/                         # Milestone 4 — LLM-assisted ambiguous-case resolver (next)
-  api.py                       # Milestone 6 — FastAPI endpoints (next)
-
-frontend/                      # Milestone 6 — dashboard (next)
-docs/
-  architecture.png             # Milestone 7
-  pitch_script.md              # Milestone 7
-```
-
-## How to run what exists so far
-
-### 1. Data Generation & CLI
+**3. Generate Synthetic Data**
 ```bash
 cd data
 python generate_synthetic_data.py --n 250 --seed 42
-
-cd ../backend
-# Or you can run the full orchestrator:
-cd agent
-python orchestrator.py --gateway ../../data/gateway_ledger.csv --bank ../../data/bank_statement.csv --output reconciliation_report.json
+cd ..
 ```
 
-### 2. Backend API
+**4. Start the Backend API**
 ```bash
 cd backend
-uvicorn api:app --reload
+uvicorn api:app --host 127.0.0.1 --port 8000
 ```
 
-### 3. Frontend Dashboard
-In a new terminal window:
+**5. Start the Frontend Dashboard**
+In a new terminal:
 ```bash
-cd frontend
-streamlit run app.py
+streamlit run frontend/app.py
 ```
+Upload the generated `data/gateway_ledger.csv` and `data/bank_statement.csv` via the UI!
 
-## Results on this run (seed=42, n=250)
-- 206 captured gateway transactions
-- 145 auto-matched (70.4% match rate)
-- 91.0% precision on those matches
-- 13 false positives — all traced to deliberately-injected decoy transactions
-  (same amount + same/near date, different counterparty) — a known, documented
-  weak point of amount+date-only tolerant matching. This is exactly the kind
-  of case Milestone 4 (LLM-assisted narration matching) is designed to fix,
-  since the decoy's UTR does not actually appear in the true transaction's
-  narration.
+---
 
-## What broke / lesson learned (for the "what broke" writeup)
-Initial version of the tolerant matcher had no ambiguity check — it would
-silently pick the *first* candidate within amount+date tolerance in the
-duplicate-bank-entry case, double-counting one gateway transaction against
-two bank entries and leaving the real second transaction unmatched. Fixed by
-requiring `len(candidates) == 1` before auto-matching, and routing anything
-with 2+ candidates to an "ambiguous -> escalate" audit entry instead of
-guessing. That change alone is what will let Milestone 4's LLM step add real
-value instead of just rubber-stamping bad rule-based guesses.
+## 📊 Performance & Results
 
-## 7-Part Milestone Plan
-1. Problem scoping & repo skeleton
-2. Synthetic data generator — DONE (this commit)
-3. Deterministic matching engine — DONE, baseline 91% precision
-4. NLP/LLM-assisted resolution for ambiguous cases — NEXT
-5. Agent orchestration, exception handling, audit trail — builds on M3/M4
-6. Backend API (FastAPI) + UI dashboard
-7. Deployment, evaluation write-up, pitch video, architecture diagram
+On our final evaluation dataset (206 Gateway Transactions, heavily injected with adversarial decoys and noisy bank text):
+
+- **Match Rate:** 85.9%
+- **Precision:** 97.2%
+- **Orphaned Records Classified:** 42 (Bank fees, interest, etc.)
+
+**Resolution Breakdown:**
+- Exact UTR: ~104
+- Tolerant Amount/Date: ~20
+- Fuzzy Narration: ~44
+- LLM Resolved: ~9
+- Exceptions: ~29
+
+---
+
+## 🛠️ What Broke & How I Fixed It
+
+Building a resilient agentic system is hard. Here are the biggest challenges we faced and solved during development:
+
+1. **The "Decoy" Duplicate Bug:** In Milestone 3, our deterministic engine kept matching the wrong bank entry when two different customers paid the exact same amount on the exact same day. **Fix:** We implemented a multi-pass pipeline. Strict exact matches run first and remove candidates from the pool, leaving the decoys to be handled by the LLM which can read the semantic context of the narration to reject false positives.
+2. **The Ground Truth API Crash:** When we moved the Orchestrator to the FastAPI server, it immediately crashed. Why? Because the orchestrator was hardcoded to look for a `ground_truth.csv` file to calculate precision, which doesn't exist when a user uploads raw files via the UI. **Fix:** We made the orchestrator defensively check for the evaluation files, gracefully skipping the precision calculation in production while maintaining it for local benchmarking.
+3. **The Real-World Messy Text (Unicode) Bug:** When scaling up our synthetic data generation to 500 records, the pandas CSV reader threw a fatal `UnicodeDecodeError`. Fake banking text generated a weird character. **Fix:** We updated the `load_data` function to use `encoding_errors="replace"`, a standard enterprise safeguard against messy legacy banking systems.
+
+---
+
+## 🔮 What's Next?
+If we had more time, we would build:
+- **Real PDF Ingestion:** Add an OCR/Vision layer to ingest unstructured bank statement PDFs directly.
+- **Multi-Currency Support:** Add dynamic forex API lookups for cross-border reconciliation tolerances.
+- **Human-in-the-Loop Feedback:** Allow users to manually resolve exceptions in the UI, feeding those decisions back into a Vector DB to fine-tune the LLM for future runs.

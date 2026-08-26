@@ -10,12 +10,10 @@ try:
 except ImportError:
     anthropic = None
 
-# Mock LLM for when API key is missing (as requested by user to proceed without it)
 def mock_llm_call(gateway_txn: dict, candidates: List[dict]) -> dict:
     """
-    A smart mock that mimics an LLM's reasoning. It looks at the context.
-    Since we know decoys have different UTRs/names, an LLM would reject them.
-    If it magically finds a candidate with the UTR, it accepts it.
+    Mock LLM function for local testing without an API key.
+    Rejects decoy transactions by verifying UTR context in narration.
     """
     g_utr = str(gateway_txn["utr"]).upper()
     for c in candidates:
@@ -26,7 +24,6 @@ def mock_llm_call(gateway_txn: dict, candidates: List[dict]) -> dict:
                 "reasoning": "UTR found in narration context, highly likely match."
             }
     
-    # If no candidates have matching context, the LLM rejects them as unrelated.
     return {
         "best_match": None,
         "confidence": 0.99,
