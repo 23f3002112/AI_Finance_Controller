@@ -1,12 +1,3 @@
-"""
-Milestone 3/6: Honest evaluation against ground truth.
-This is what the buildathon bar means by "measured accuracy" — not just a
-match-rate percentage, but PRECISION (were the matches actually correct?).
-
-Run this yourself during development. In your real submission, ground_truth.csv
-represents information you would NOT have in production — it's your dev-time
-scoring tool, not part of the pipeline.
-"""
 
 import pandas as pd
 
